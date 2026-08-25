@@ -1,25 +1,31 @@
 <!doctype html>
 <html>
   <head>
-    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" type="text/css" href="./main.css" />
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
+      content="script-src 'self' 'unsafe-inline';"
     />
     <title>Hello from Electron renderer!</title>
   </head>
+
   <body>
     <div class="container">
-      <div>
-        <h1>Hello from Electron renderer!</h1>
-        <p>Hey Cassini! 👋</p>
-        <p id="info"></p>
-      </div>
+      <h1>Hello from Electron renderer!</h1>
+      <p>Hey Cassini! 👋</p>
+    </div>
+
+    <div class="container">
+      <h1>Mode Toggles</h1>
+
+      <p>Light/Dark Mode</p>
+      <button id="light-dark-toggle">TOGGLE</button>
+
+      <p>Sync To System</p>
+      <button id="sync-btn">SYNC</button>
+
+      <p>Current theme source: <strong id="theme-source">System</strong></p>
     </div>
   </body>
   <script src="./renderer.js"></script>
